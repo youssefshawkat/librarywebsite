@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <script>
+        function validateForm() {
+          var x = document.forms["form"]["email"].value;
+          var y = document.forms["form"]["password"].value;
+          var type = document.getElementById("type");
+
+          if (x == "") {
+            alert("Email Must Be Filled!");
+            return false;
+          }
+
+          if (y == "") {
+            alert("Password Must Be Filled!");
+            return false;
+          }
+
+        if (type.value == "") {
+
+        alert("Please Select an Option!");
+        return false;
+        }
+          
+
+        }
+
+        </script>
+
+    <style>
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+        body{
+
+            
+            background: url('image.jpg') no-repeat fixed center center;
+			background-size: cover;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+        }
+
+        .Welcome{
+
+            font-size: 50px;
+            font-family:Brush Script MT;
+            color:aliceblue;
+            text-align: center;
+            
+            
+
+        }
+        .title {
+
+            color:aliceblue;
+            font-size: 90px;
+            font-family:'Times New Roman', Times, serif ;
+            text-align: center;
+        
+        }
+        .buttons {
+
+font-size: 15px;
+padding: 20px 40px;
+background-color : orange;
+border: 2px solid white;
+border-radius: 8px;
+border: none;
+outline:none;
+transition-duration: 0.4s;
+position: relative;
+margin : 15px; 
+
+}
+
+.buttons:hover {
+background-color: white;
+color: black;
+
+}
+
+        
+
+        .form {
+
+
+            height: 420px;
+            width:450px;
+            padding: 20px;
+            border-radius: 7px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+            margin-top: 5%;
+
+      
+        }
+
+        input[type=text], select,[type = password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 20px 0;
+        }
+
+        .type{
+
+            color: white;
+            font-size: 20px;
+            font-family:Times New Roman;
+        }
+
+        .labels{
+        
+           
+        color : white;
+        font-size:18px;
+        }
+                
+
+    </style>
+</head>
+
+<body>
+
+    <p class="Welcome">Welcome To </p>
+    <p class="title"><b>University Library system</b></p>
+   
+   <center> <form class = "form" style = " text-align: left" name = "form" onsubmit="return validateForm()">   
+        <label class ="labels"><b>Email</b></label>
+        <input type="text" name="email" placeholder="Enter Email" >
+        <label class ="labels"><b>Password</b></label>
+        <input type="password" id="password"  name="password" placeholder="Enter Password" >
+        <label class ="labels"><b>Login In as</b></label>
+        <select id="type" name="type">
+        <option value="" disabled selected>Select an Option</option>
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+        </select>
+        <label class = "labels">
+            <input type="checkbox" checked="checked" name="remember" style=" margin-bottom:15px;" > Remember me
+          </label><br>
+          <center><div>
+          <button class="buttons"  type="submit" formnovalidate >Login</button>
+          <button class="buttons" type ="button" onclick="location.href='signup.html'" > Sign Up </button>
+          </div></center>
+        </form></center>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Book</title>
+        <script>
+            function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.body.innerHTML =
+                    this.responseText;
+               }
+            };
+            xhttp.open("GET", "update2.html", true);
+            xhttp.send();
+        }
+
+        function validateForm() {
+          var x = document.getElementById("name").value;
+          var y = document.getElementById("isbn").value;
+        var cansubmit = true;
+          if (x == "") {
+            
+             cansubmit = false;
+          }
+
+          if (y == "") {
+            
+            cansubmit = false;
+          }
+          
+           document.getElementById('submitbutton').disabled = !cansubmit;
+
+        }
+        </script>
+        <style>
+                 
+             body, html {
+                    height: 100%;
+                    margin: 0;
+                    }
+                    
+                body{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                    }
+                    
+                    .bg {
+                    /* The image used */
+                    background-image: url("image.jpg");
+
+                    /* Full height */
+                    height: 100%; 
+
+                    /* Center and scale the image nicely */
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    }
+                .label{
+                    color:white;
+                    font-size:18px;
+                    font-weight: bold;
+                      }    
+                .container{
+                            height: 320px;
+                            width: 600px;
+                            padding: 20px;
+                            padding-bottom: 15px;
+                            border-radius: 7px;
+                            background: rgba(0, 0, 0, 0.8);
+                            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                            justify-content: center;
+                            align-items: center;
+                         }
+                .input{
+                            width: 100%;
+                            padding: 15px 35px;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                            margin: 25px 0;
+                      }
+
+                .buttons {
+                    font-size: 15px;
+                    padding: 20px 40px;
+                    background-color : orange;
+                    border: 2px solid white;
+                    border-radius: 8px;
+                    border: none;
+                    outline:none;
+                    transition-duration: 0.4s;
+                    position: relative;
+                    margin :15px;
+                          }
+
+                .buttons:hover {
+                                background-color: white;
+                                color: black;
+                               }
+                button:disabled,
+                .button[disabled]{
+                background-color: #cccccc;
+                color: #666666;
+                }
+                
+        </style>
+    </head>
+    <body class = "bg">
+        <form  class = "container"> 
+            <label class = "label" >Book Name:</label>
+            <input type = "text" id="name" placeholder="Enter Book Name" class = "input" onKeyup="validateForm()" >
+            <br>
+            <label class = "label">Book ISBN:</label>
+            <input type = "text"   id="isbn" class = "input" placeholder="Enter Book ISBN"  onKeyup="validateForm()">
+            <br>
+            <center><div>
+           
+                <button type="button" onclick="loadDoc()" class="buttons" id = "submitbutton" disabled >Update</button>
+                <button type="button" onclick="location.href='homepageA.html'" class="buttons">Back</button>
+        </div></center>
+        </form>
+    </body>
+
+</html>

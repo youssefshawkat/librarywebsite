@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+  <script>
+    function validateForm() {
+      var x = document.forms["form"]["fname"].value;
+      var y = document.forms["form"]["lname"].value;
+      var z = document.forms["form"]["email"].value;
+      var p = document.forms["form"]["psw"].value;
+      var pr = document.forms["form"]["psw-repeat"].value;
+      var n = document.forms["form"]["Phone#"].value;
+      var option = document.getElementsByName('gender');
+
+
+      if (x == "") {
+        alert("First Name Is Required!");
+        return false;
+      }
+
+      if (y == "") {
+        alert("Last Name Is Required!");
+        return false;
+      }
+
+      if (z == "") {
+        alert("Email Is Required!");
+        return false;
+      }
+      if (p == "") {
+        alert("Password Is Required!");
+        return false;
+      }
+      if (pr == "") {
+        alert("Please Enter Password Again!");
+        return false;
+      }
+      if (pr != p) {
+        alert("Password Does Not Match!");
+        return false;
+      }
+
+    if (type.value == "") {
+
+    alert("Please Select an Option!");
+    return false;
+    }
+    if (n == "") {
+        alert("Please Enter Your Phone Number");
+        return false;
+      }
+      
+      if (!(option[0].checked || option[1].checked)) {
+    alert("Please Select Your Gender");
+    return false;
+    }
+
+    }
+
+ 
+  
+    </script>
+
+<style>
+
+body{
+
+            
+background: url('image.jpg') no-repeat fixed center center;
+background-size: cover;
+display : flex;
+justify-content: center;
+align-items: center;
+margin-top:2%;
+
+}
+
+
+.button{
+
+           
+font-size: 15px;
+padding: 20px 40px;
+border: 2px solid #00;
+background-color : orange;
+border-radius: 8px;
+border: none;
+outline:none;
+transition-duration: 0.4s;
+cursor: pointer;
+color : black;
+margin :15px;
+
+}
+
+.button:hover {
+background-color: white;
+color: black;
+
+}
+
+
+
+.form {
+
+height: 900px;
+width:450px;
+padding: 20px;
+border-radius: 7px;
+background: rgba(0, 0, 0, 0.8);
+box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+
+
+
+}
+
+input[type=text],select,[type = password] {
+width: 100%;
+padding: 12px 20px;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin: 20px 0;
+}
+
+.labels{
+
+    color : white;
+    font-size:18px;
+    font-weight: bold;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+    
+    <form class = "form" name="form" onsubmit="return validateForm()">
+
+        <label class ="labels">First Name</label>
+        <input type="text" placeholder="Enter Your First Name" name="fname" id="fn">
+  
+        <label class ="labels">Last Name</label>
+        <input type="text" placeholder="Enter Your Last Name" name="lname" id="ln">   
+    
+        <label class ="labels">Email</label>
+      <input type="text" placeholder="Enter Email" name="email" id="email">
+
+      <label class ="labels">Password</label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw">
+
+      <label class ="labels">Repeat Password</label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pswr">
+
+      <label class ="labels">Phone Number</label>
+      <input type="text" placeholder="Enter Phone Number" name="Phone#" id="Phone#">
+
+      
+      <label class ="labels">Gender</label><br>
+      <br><input type="radio" id="gender1" name="gender" value="Male">
+      <label class = "labels" for="gender1">Male</label><br>
+      <input type="radio" id="gender2" name="gender" value="Female">
+      <label class = "labels" for="gender2">Female</label><br>
+
+
+      <br><label class ="labels">Sign Up as</label>
+        <select id="type" name="type">
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+        </select>
+      <center><button class="button" type="submit" formnovalidate >Sign Up</button>
+
+							<button class ="button"  type ="button" onclick="location.href='login.html'">Previous Page</button>
+                    </form>
+
+    
+
+    
+
+</body>
+
+
+
+
+</html>

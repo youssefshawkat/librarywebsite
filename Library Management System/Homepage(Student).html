@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home(Student)</title>
+        <style>
+            body
+            {
+            width: 100vw;
+            height: 0vh;
+            align-items: center;
+            background-color: #222831;
+            font-family: sans-serif;
+            }
+
+            div{height:65px;width:1350px}
+
+            h1
+            {
+            text-align: center; 
+            font-size: 50px;
+            color: aliceblue;
+            font-family:'Times New Roman', Times, serif;
+            position: relative;
+            top: 10%;
+            margin-bottom: 4%;
+            }
+            
+            .Main {
+                    position: relative;
+                    top : 10%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    
+                }       
+            
+            .Browse{
+                   background: url("search.jpg") no-repeat center center;
+                   background-size: cover;
+                   height:325px;
+                   width:325px;
+                   padding: 20px;
+                   padding-bottom: 15px;
+                   border-radius: 7px;         
+                   box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                   justify-content: center;
+                   align-items: center;
+                   position: relative;
+                   bottom: 10%;
+                   
+                  }    
+
+            .Borrow
+            {
+                background: url("Borrow.jpg") no-repeat center center;
+                background-size: cover;
+                height:325px;
+                width:325px;
+                padding: 20px;
+                padding-bottom: 15px;
+                border-radius: 7px;         
+                box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                left : 5%;
+                bottom: 10%;
+            }
+           
+            .Extend{
+                   background: url("Extend.jpg") no-repeat center center;
+                   background-size: cover;
+                   height:325px;
+                   width:325px;
+                   padding: 20px;
+                   padding-bottom: 15px;
+                   border-radius: 7px;         
+                   box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                   justify-content: center;
+                   align-items: center;
+                   position: relative;
+                    left :10%;
+                    bottom: 10%;
+                 }
+            
+            .Return
+                   {
+                   background: url("Return.jpg") no-repeat center center;
+                   height: 325px;
+                   width:325px;
+                   padding: 20px;
+                   padding-bottom: 15px;
+                   border-radius: 7px;         
+                   box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                   justify-content: center;
+                   align-items: center;
+                   position: relative;
+                   top: 20%;
+                    left :10%;
+                   }
+            
+           
+            .Update
+                    {
+                    background: url("updatepro.jpg") no-repeat center center;
+                    height: 325px;
+                    width:325px;
+                    background-size: cover;
+                    padding: 20px;
+                    padding-bottom: 15px;
+                    border-radius: 7px;         
+                    box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                   top: 20%;
+                    }
+
+                    .button{
+                           cursor:pointer;
+                           font-size: 15px;
+                           padding: 20px 40px;
+                           background-color : orange;
+                           border: 2px solid white;
+                           border-radius: 8px;
+                           border: none;
+                           outline:none;
+                           transition-duration: 0.4s;
+                           position: relative;
+                           left: 20%;
+                           top: 85%;
+                           }
+
+                    .button:hover {
+                                   background-color: white;
+                                   color: black;
+                                   }
+           
+                                   .logout{
+
+
+                                    font-size: 15px;
+                                    padding: 20px 40px;
+                                    background-color : red;
+                                    border: 2px solid white;
+                                    border-radius: 8px;
+                                    border: none;
+                                    outline:none;
+                                    transition-duration: 0.4s;
+                                    position: relative;
+                                    top: 2%;
+                                    left: 90%;
+
+
+                                    }
+
+                                    .logout:hover {
+
+                                    background-color: white;
+                                    color: black;
+
+                                    }
+
+            
+        </style>
+    </head>
+    <body>
+        <button class="logout" onclick="location.href='Login.html'">logout</button>
+
+            <h1>Student</h1>
+
+        <div class ="Main">
+
+            <div class = "Browse">
+                <button class ="button"  onclick="location.href='Browse.html'">Browse Books</button>
+            </div>
+
+            <div class = "Borrow">
+                <button class ="button" style ="position: relative; left: 25%;" onclick="location.href='borrow.html'">Borrow Book</button>
+            </div>
+
+            <div class = "Extend" >
+                <button class ="button" style ="position: relative; left: 33%;"  onclick="location.href='Extend.html'">Extend</button>
+            </div>
+
+            <div class = "Return">
+                <button class ="button" onclick="location.href='return.html'">Return a Book</button>
+            </div>
+
+            <div class = "Update" >
+                <button class ="button" style ="position: relative; left: 25%;"  onclick="location.href='Update.html'">Update Profile</button>
+            </div>
+    </div>
+
+    
+
+    </body>
+</html>

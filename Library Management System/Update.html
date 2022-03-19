@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Profile</title>
+
+        <script>
+            function validateForm() {
+              var x = document.getElementById('fname').value;
+              var y = document.getElementById('lname').value;
+            var z = document.getElementById('email').value;
+            var p = document.getElementById('opass').value;
+            var pr = document.getElementById('npass').value;
+            var npr = document.getElementById('renpass').value;
+            var n = document.getElementById('Phone#').value;
+            var option = document.getElementsByName('gender');
+        
+             
+              if (x == "") {
+                alert("First Name Is Required!");
+                return false;
+              }
+              if (y == "") {
+        alert("Last Name Is Required!");
+        return false;
+      }
+
+      if (z == "") {
+        alert("Email Is Required!");
+        return false;
+      }
+      if (!(option[0].checked || option[1].checked)) {
+    alert("Please Select Your Gender!");
+    return false;
+    }
+      if (n == "") {
+        alert("Please Enter Your Phone Number!");
+        return false;
+      }
+      if (p == "") {
+        alert("Old Password Is Required!");
+        return false;
+      }
+      if (pr == "") {
+        alert("New Password Is Required!");
+        return false;
+      }
+      if (npr == "") {
+        alert("Please Enter New Password Again!");
+        return false;
+      }
+      if (pr != npr) {
+        alert("Password Does Not Match!");
+        return false;
+      }
+
+    
+
+    }
+  
+        
+            
+        
+            
+        
+         
+          
+            </script>
+        
+        <style>
+            * {
+                    padding: 0;
+                    margin: 0;
+                  }   
+                body{
+                    
+                        background-image: url("image.jpg");
+                        background-repeat:no-repeat;
+                        background-size: cover;
+                        margin-top:2%;
+                        display: flex;
+                        justify-content: center;
+                        
+                    }
+
+                    html { 
+                    background: url(image.jpg) no-repeat center center fixed; 
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                    }
+                    
+                .label{
+                        color:white;
+                        font-size:18px;
+                        font-weight: bold;
+                      }    
+
+                .container{
+                            height: 650px;
+                            width: 600px;
+                            padding: 50px;
+                            padding-bottom: 15px;
+                            border-radius: 7px;
+                            background: rgba(0, 0, 0, 0.8);
+                            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                            display:flex;
+                         }      
+
+                .input{
+                            width: 100%;
+                            padding: 10px 20px;
+                            display:block;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                            margin: 20px 0;
+                      }   
+                .buttons {
+                            cursor:pointer;
+                            font-size: 15px;
+                            padding: 20px 40px;
+                            background-color : orange;
+                            border: 2px solid white;
+                            border-radius: 8px;
+                            border: none;
+                            outline:none;
+                            transition-duration: 0.4s;
+                            position: relative;
+                            left: 115%;
+                            margin: 5px 5px;
+                          }      
+
+                .buttons:hover {
+                                background-color: white;
+                                color: black;
+                               }     
+                h1
+                {   
+                    color: white;
+                    text-align: left;
+                } 
+
+        </style>
+    </head>
+    <body>
+    
+            <form class = "container" onsubmit="return validateForm()"> 
+                <div>
+                <h1>Personal Info</h1><br>
+                <label class = "label">Change First Name</label>
+                <input type = "text" placeholder = "Enter Your First Name" class = "input" id = "fname">
+                <label class = "label">Change Last Name</label>
+                <input type = "text" placeholder = "Enter Your Last Name" class = "input" id = "lname">
+                <label class = "label">Change Email</label>
+                <input type = "text" placeholder = "Enter Email" class = "input" id = "email">
+                <label class ="label"><b>Gender</b></label><br>
+                <br><input type="radio" id="gender1" name="gender" value="Male">
+                <label class = "label" for="gender1">Male</label><br>
+                <input type="radio" id="gender2" name="gender" value="Female">
+                <label class = "label" for="gender2">Female</label><br>
+               <br><label class ="label"><b>Phone Number</b></label>
+                <input type="text" placeholder="Enter Phone Number" name="Phone#" id="Phone#" class = "input">
+                <button class = "buttons" formnovalidate >Update</button>
+            </div>
+            <div style="margin-left: auto;">
+                <h1>Security</h1><br>
+                <label class = "label">Change Password</label>
+                <input type = "password" placeholder = "Enter Old Password" class = "input" id = "opass">
+                <input type = "password" placeholder = "Enter New Password" class = "input" id = "npass">
+                <input type = "password" placeholder = "Repeat New Password" class = "input" id = "renpass">
+
+            </div>
+            </form>
+        
+    </body>
+</html>

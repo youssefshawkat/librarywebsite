@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+        body {
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        background-color: #222831;
+        font-family: sans-serif;
+        }
+
+h1{
+
+    color: aliceblue;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    position: relative;
+    top: 10%;
+}
+
+.Main {
+
+        position: relative;
+        top : 20%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      
+
+
+
+}       
+
+.Update {
+
+            background: url("update.jpg") no-repeat center center;
+			background-size: cover;
+            height: 325px;
+            width:325px;
+            padding: 20px;
+            padding-bottom: 15px;
+            border-radius: 7px;
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+            justify-content: center;
+            align-items: center;
+
+
+    
+}
+
+.Add {
+            background: url("add.jpeg") no-repeat center center;
+			background-size: cover;
+            height: 325px;
+            width:325px;
+            padding: 20px;
+            padding-bottom: 15px;
+            border-radius: 7px;
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+      
+
+
+}
+
+.Browse {
+
+             
+            background: url("search.jpg") no-repeat center center;
+			background-size: cover;
+            height: 325px;
+            width:325px;
+            padding: 20px;
+            padding-bottom: 15px;
+            border-radius: 7px;         
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+            justify-content: center;
+            align-items: center;
+
+
+
+}
+
+.UpdateProfile {
+
+background: url("updatepro.jpg") no-repeat center center;
+background-size: cover;
+height: 325px;
+width:325px;
+padding: 20px;
+padding-bottom: 15px;
+border-radius: 7px;
+box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+justify-content: center;
+align-items: center;
+
+
+
+}
+
+.buttons {
+
+font-size: 15px;
+padding: 20px 40px;
+background-color : orange;
+border: 2px solid white;
+border-radius: 8px;
+border: none;
+outline:none;
+transition-duration: 0.4s;
+position: relative;
+left: 25%;
+top: 85%;
+
+}
+
+.buttons:hover {
+background-color: white;
+color: black;
+
+}
+
+.logout{
+
+
+    font-size: 15px;
+padding: 20px 40px;
+background-color : red;
+border: 2px solid white;
+border-radius: 8px;
+border: none;
+outline:none;
+transition-duration: 0.4s;
+position: relative;
+top: 2%;
+left: 90%;
+
+
+}
+
+.logout:hover {
+    
+background-color: white;
+color: black;
+
+}
+
+
+
+
+
+</style>
+
+<body>
+    
+    <button class="logout" onclick="location.href='Login.html'">logout</button>
+
+
+    <h1><center>Admin</h1>
+
+<div class ="Main">
+
+
+    
+    <div class = "Add">
+
+        <button class="buttons" onclick="location.href='AddBook.html'">Add a Book</button>
+
+    </div>
+
+    <div class = "Browse">
+
+        <button class="buttons"  style = "position : relative; left : 18%; " onclick="location.href='Browse.html'" >Browse Books</button>
+    
+        </div>
+
+
+
+    <div class = "Update">
+
+        <button class="buttons" onclick="location.href='update1.html'">Update a Book</button>
+
+    </div>
+
+    <div class = "UpdateProfile">
+
+        <button class="buttons" onclick="location.href='Update.html'">Update Profile</button>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+</body>
+
+
+
+</html>

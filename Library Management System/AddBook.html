@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<style>
+		
+    * {
+  padding: 0;
+  margin: 0;
+}
+body{
+		
+		background-image: url("image.jpg");
+		background-repeat:no-repeat;
+		background-size: 100% 100%;
+		margin-top:2%;
+		display : flex;
+		justify-content: center;
+		align-items: center;
+}
+.label
+{		
+		color:white;
+		font-size:18px;
+		font-weight: bold;
+}
+
+h1
+            {
+				
+            text-align: center; 
+            color: aliceblue;
+            font-family:'Times New Roman', Times, serif;
+            }
+
+
+
+.container
+{
+
+			height: 780px;
+            width:450px;
+            padding: 20px;
+            padding-bottom: 15px;
+            border-radius: 7px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+			
+	
+            
+
+
+}
+.buttons {
+
+		font-size: 15px;
+		padding: 20px 40px;
+		background-color : orange;
+		border: 2px solid white;
+		border-radius: 8px;
+		border: none;
+		outline:none;
+		transition-duration: 0.4s;
+		position: relative;
+
+
+}
+
+		.buttons:hover {
+		background-color: white;
+		color: black;
+
+}
+.input{
+
+		width: 100%;
+		padding: 12px 20px;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin: 10px 0;
+}
+</style>
+</head>
+<body>
+	<form class="container">
+   <div>
+	   <h1>Add a Book</h1>
+	   <br>
+	   <label class="label">Book Title:</label>
+	   <input class = "input" type="text"  placeholder="Book Title"  required>
+	   <label class="label">Category:</label>
+	   <select name="category_id" class = "input" required>
+		<option></option>
+		<option>Fantasy </option>
+		<option>Sci-Fi</option>
+		<option>Mystery</option>
+		
+		<option>Romance</option>
+		<option>Dystopian</option>
+		</select>
+		<label class="label">Author:</label>
+		<input type="text" placeholder="Author" class = "input" required>
+		<label class="label">Book Copies:</label>		
+		<input type="number" placeholder="" required min="1" max="100" class = "input">
+		
+	<label class="label">Book Publication:</label>
+	<input type="text" placeholder="Book Publication" required class = "input">
+	<label class="label">Publisher Name:</label>
+	<input type="text" placeholder="Publisher Name" required class = "input">
+	<label class="label">Copyright Year:</label>
+	<input type="text" placeholder="Copyright Year" required class = "input">
+	<label class="label">ISBN:</label>
+
+		<input type="text" class="input"  placeholder="ISBN" required >
+	
+		<center><button name="submit" type="submit" class="buttons">Save</button></center>
+
+    </div>
+</form>	
+</body>
+</html>
